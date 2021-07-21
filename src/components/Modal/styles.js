@@ -8,7 +8,7 @@ export const Overlay = styled.div`
   bottom: 0;
   display: flex;
   justify-content: center;
-  align-itens: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
   background-color: rgba(78,89,131,0.5);
@@ -25,5 +25,5 @@ export const Dialog = styled.div`
   padding: 24px;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0px 0px 32px rgba(78.89,131,0.2);
+  box-shadow: 0px 0px 32px rgba(78,89,131,0.2);
 `;
