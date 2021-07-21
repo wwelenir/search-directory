@@ -11,6 +11,7 @@ import { Card, RestaurantCard, Modal, Map } from '../../components';
 
 export default () => {
   const [inputValue, setInputValue] = useState();
+  const [query, setQuery] = useState(null);
   const [modalOpened, setModalOpened] = useState(false);
 
   const settings = {
@@ -21,6 +22,12 @@ export default () => {
     slidesToScroll: 4,
     adaptiveHeight: true,
   };
+
+  function handleChange(e) {
+    if (e.key === 'Enter') {
+      setQuery(inputValue);
+    }
+  }
 
   return (
     <Wrapper>
@@ -33,6 +40,7 @@ export default () => {
             trailingIcon={<MaterialIcon role="button" icon="search" />}
           ><Input
               value={inputValue}
+              onKeyPress={handleChange}
               onChange={(e) => setInputValue(e.target.value)}
             />
           </TextField>
@@ -49,7 +57,7 @@ export default () => {
         </Search>
         <RestaurantCard />
       </Container >
-      <Map />
+      <Map query={query} />
       <Modal open={modalOpened} onClose={() => setModalOpened(!modalOpened)} />
     </Wrapper>
   )
