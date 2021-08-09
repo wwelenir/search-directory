@@ -11,7 +11,7 @@ export const MapContainer = (props) => {
   const [map, setMap] = useState(null);
 
   useEffect(() => {
-    const searchByQuery = (query) => {
+    async function searchByQuery(query) {
       const service = new google.maps.places.PlacesService(map);
       dispatch(setRestaurants([]));
 
@@ -34,7 +34,7 @@ export const MapContainer = (props) => {
   }, [query]);
 
   useEffect(() => {
-    const getRestaurantById = (placeId) => {
+    async function getRestaurantById(placeId) {
       const service = new google.maps.places.PlacesService(map);
       dispatch(setRestaurant(null));
 
