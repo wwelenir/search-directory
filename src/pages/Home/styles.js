@@ -30,17 +30,37 @@ export const Map = styled.div`
   width: 500px;
 `;
 
-export const Carrousel = styled(Slider)`
-  .stlick-slide{
-    margin-right: 16px;
+export const Carousel = styled(Slider)`
+  .slick-slide{
+    margin-right: 30px;
   }
 `;
 
-export const CarousselTitle = styled.h1`
+export const CarouselTitle = styled.h1`
   font-family: ${(props) => props.theme.fonts.regular};
   color: ${(props) => props.theme.colors.text};
   font-size: 24px;
   font-weight: bold;
   line-height: 29px;
   margin: 16px 0;
+`;
+
+export const ModalTitle = styled.p`
+  margin-bottom: 10px;
+  letter-spacing: 0.11px;
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.text};
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: bold;
+`;
+
+export const ModaContent = styled.p`
+  margin-bottom: 10px;
+  letter-spacing: 0.11px;
+  font-family: ${(props) => props.theme.fonts.regular};
+  color: ${(props) => props.theme.colors.text};
+  line-height: 19px;
+  font-size: 16px;
+  font-weight: normal;
 `;
